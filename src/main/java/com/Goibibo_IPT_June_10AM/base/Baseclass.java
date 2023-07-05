@@ -206,5 +206,37 @@ public class Baseclass {
 		}
 		r.keyPress(KeyEvent.VK_ENTER);
 	}
+	public static void JSscrollToEnd() {
+		try {
+		    long lastHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
+		    int cont=200;
+		    while (true) {
+		        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, "+cont+");");
+		        Thread.sleep(2000);
+
+		        long newHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
+		        if (newHeight <= cont) {
+		            break;
+		        }
+		       lastHeight = newHeight;
+		        cont+=200;
+		    }
+		} catch (InterruptedException e) {
+		    e.printStackTrace();
+		}
+		}
+
+		public static String addCommasToNumericString(String digits) {
+			
+			String result = "";
+			for (int i = 1; i <= digits.length(); ++i) {
+				char ch = digits.charAt(digits.length() - i);
+				if (i % 3 == 1 && i > 1) {
+					result = "," + result;
+				}
+				result = ch + result;
+			}
+			return result;
+		}
 	
 }
