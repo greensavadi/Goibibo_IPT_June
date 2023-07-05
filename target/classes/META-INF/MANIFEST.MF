@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: jayak
 Build-Jdk: 17.0.7
+=======
+Built-By: Shan Smart
+Build-Jdk: 17.0.5
+>>>>>>> 0d371c4399ee5ef587084515f4537befd75e774e
 Created-By: Maven Integration for Eclipse
 
