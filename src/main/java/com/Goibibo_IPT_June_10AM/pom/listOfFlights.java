@@ -15,9 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.IptTestNGTask.GoIbibo_BaseClass;
+import com.Goibibo_IPT_June_10AM.base.Baseclass;
 
-public class listOfFlights extends GoIbibo_BaseClass{
-	
+public class listOfFlights extends Baseclass {
+	public WebDriver driver;
 		public listOfFlights() {
 			
 			PageFactory.initElements(driver,this);
